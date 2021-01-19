@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{310315D3-AF05-4794-AEAD-06CBD970ACD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteDbDemo", "src\LiteDbDemo\LiteDbDemo.csproj", "{F76634DE-6C22-4C0A-A514-9BA21C09A372}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F76634DE-6C22-4C0A-A514-9BA21C09A372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F76634DE-6C22-4C0A-A514-9BA21C09A372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F76634DE-6C22-4C0A-A514-9BA21C09A372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F76634DE-6C22-4C0A-A514-9BA21C09A372}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F76634DE-6C22-4C0A-A514-9BA21C09A372} = {310315D3-AF05-4794-AEAD-06CBD970ACD4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ECAA0094-DD0A-46AB-A43B-461ABA64BE56}
+	EndGlobalSection
+EndGlobal
