@@ -1,12 +1,14 @@
-﻿using System;
+﻿using System.Threading.Tasks;
+using CF.Library.Bootstrap;
 
 namespace LiteDbDemo
 {
 	public static class Program
 	{
-		public static void Main()
+		public static async Task<int> Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			var application = new ConsoleApplication(new ApplicationBootstrapper());
+			return await application.Run(args).ConfigureAwait(false);
 		}
 	}
 }
