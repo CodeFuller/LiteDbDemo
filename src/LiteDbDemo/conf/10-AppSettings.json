@@ -1,4 +1,6 @@
 ﻿{
+	"databasePath": "d:/temp/LiteDB/LiteDbDemo.db",
+
 	"logging": {
 		"defaultLogLevel": "Information",
 		"targets": [
