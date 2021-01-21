@@ -179,6 +179,37 @@ namespace LiteDbDemo
 
 			// Partial update of multiple documents.
 			collection.UpdateMany(album => new Album { Title = "Updated: " + album.Title }, album => album.Year >= 2020);
+
+			// Upsert
+			var docForUpsert = new Album
+			{
+				Year = 1999,
+				Title = "Wishmaster",
+				Artist = "Nightwish",
+
+				Songs = new List<Song>
+				{
+					new()
+					{
+						TrackNumber = 1,
+						Title = "She Is My Sin",
+						Length = new TimeSpan(0, 4, 46),
+					},
+				},
+			};
+
+			collection.Upsert(docForUpsert);
+
+			docForUpsert.Year = 2000;
+			docForUpsert.Songs.Add(new()
+			{
+				TrackNumber = 2,
+				Title = "02 - The Kinslayer",
+				Length = new TimeSpan(0, 3, 58),
+			});
+
+			// This works, because first upsert has filled Id property in the document.
+			collection.Upsert(docForUpsert);
 		}
 
 		private void DeleteData(ILiteCollection<Album> collection)
