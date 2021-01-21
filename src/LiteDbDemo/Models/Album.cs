@@ -11,6 +11,8 @@ namespace LiteDbDemo.Models
 
 		public string Title { get; set; }
 
+		public string Artist { get; set; }
+
 #pragma warning disable CA2227 // Collection properties should be read only
 		public ICollection<Song> Songs { get; init; }
 #pragma warning restore CA2227 // Collection properties should be read only

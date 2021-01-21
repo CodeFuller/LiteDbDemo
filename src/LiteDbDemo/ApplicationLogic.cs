@@ -87,6 +87,7 @@ namespace LiteDbDemo
 			{
 				Year = 1999,
 				Title = "Issues",
+				Artist = "Korn",
 
 				Songs = new List<Song>
 				{
@@ -110,6 +111,7 @@ namespace LiteDbDemo
 			{
 				Year = 2000,
 				Title = "Don't Give Me Names",
+				Artist = "Guano Apes",
 
 				Songs = new List<Song>
 				{
