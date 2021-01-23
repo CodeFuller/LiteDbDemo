@@ -1,12 +1,12 @@
-﻿using CF.Library.Bootstrap;
-using CF.Library.Logging;
+﻿using CodeFuller.Library.Bootstrap;
+using CodeFuller.Library.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace LiteDbDemo
 {
-	internal class ApplicationBootstrapper : DiApplicationBootstrapper<IApplicationLogic>
+	internal class ApplicationBootstrapper : BasicApplicationBootstrapper<IApplicationLogic>
 	{
 		protected override void RegisterServices(IServiceCollection services, IConfiguration configuration)
 		{
@@ -17,7 +17,7 @@ namespace LiteDbDemo
 
 		protected override void BootstrapLogging(ILoggerFactory loggerFactory, IConfiguration configuration)
 		{
-			loggerFactory.LoadLoggingConfiguration(configuration);
+			loggerFactory.AddLogging(settings => configuration.Bind("logging", settings));
 		}
 	}
 }

@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using CF.Library.Bootstrap;
+using CodeFuller.Library.Bootstrap;
 
 namespace LiteDbDemo
 {
@@ -7,8 +7,10 @@ namespace LiteDbDemo
 	{
 		public static async Task<int> Main(string[] args)
 		{
-			var application = new ConsoleApplication(new ApplicationBootstrapper());
-			return await application.Run(args).ConfigureAwait(false);
+			using var bootstrapper = new ApplicationBootstrapper();
+			var application = new ConsoleApplication(bootstrapper);
+
+			return await application.Run(args);
 		}
 	}
 }
